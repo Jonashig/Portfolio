@@ -1,0 +1,149 @@
+:root {
+  --bg-light: #f9f9f9;
+  --text-light: #ffffff;
+  --bg-dark: #121212;
+  --text-dark: #ffffff;
+  --primary: #024796;
+  --card-bg-light: #024796;
+  --card-bg-dark: #1e1e1e;
+}
+
+html[data-theme="light"] {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+html[data-theme="dark"] {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.header {
+  background-color: #024796;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.section {
+  margin: 2rem 0;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background-color: var(--primary);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+html[data-theme="dark"] .card {
+  background-color: var(--card-bg-dark);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: var(--primary);
+  color: #fff;
+}
+.btn {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.4rem 1rem;
+  background-color: #0878f8;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #024796;
+}
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Imagem de fundo dinâmica com tema */
+html[data-theme="light"] body {
+  background-image: url("../imagens/fundo-site.jpg");
+}
+
+html[data-theme="dark"] body {
+  background-image: url("../imagens/fundo-site.jpg"); /* Pode trocar por outra versão se quiser */
+  filter: brightness(0.85);
+}
+
+.perfil {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.foto-wrapper {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--primary);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.foto-perfil {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
